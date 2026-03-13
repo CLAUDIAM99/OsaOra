@@ -60,8 +60,8 @@ jobs:
         with:
           node-version: "22"
           cache: ${{ steps.detect-package-manager.outputs.has_lock == 'true' && steps.detect-package-manager.outputs.manager || '' }}
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      - name: Verifica Node
+        run: node -v && npm -v
       - name: Restore cache
         if: steps.detect-package-manager.outputs.has_lock == 'true'
         uses: actions/cache@v4
@@ -75,6 +75,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: Verifica output
+        run: ls -la out/ 2>/dev/null || (echo "Cartella out non trovata" && exit 1)
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
