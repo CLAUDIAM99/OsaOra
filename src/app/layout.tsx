@@ -1,23 +1,25 @@
 import type { Metadata } from "next";
-import { Outfit, Lora } from "next/font/google";
+import { Plus_Jakarta_Sans, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
+const sans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  variable: "--font-sans",
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
-const lora = Lora({
+const serif = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-geist-serif",
+  variable: "--font-serif",
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   title: "OsaOra — Un momento di chiarezza",
   description:
-    "Uno spazio gentile per momenti di paura, procrastinazione o blocco. Non è terapia: è un supporto motivazionale che non sostituisce un professionista.",
+    "Supporto motivazionale gentile per quando ti senti bloccata, impaurita o sopraffatta. Non è terapia: è come avere un coach mentale al tuo fianco.",
 };
 
 export default function RootLayout({
@@ -26,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="it" className={`${outfit.variable} ${lora.variable}`}>
+    <html lang="it" className={`${sans.variable} ${serif.variable}`}>
       <body className="min-h-screen bg-osa-bg font-sans text-osa-text antialiased">
         {children}
       </body>

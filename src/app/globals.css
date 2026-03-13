@@ -3,14 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --osa-bg: #faf8f6;
-  --osa-plum: #5c4d6a;
-  --osa-plum-deep: #3d3347;
-  --osa-rose: #b8a4b0;
-  --osa-peach: #e8b89a;
-  --osa-gold: #c9a86c;
-  --osa-slate: #1e293b;
-  --osa-slate-muted: #64748b;
+  --osa-bg: #fcf8fb;
+  --osa-bg-warm: #f7ecf3;
+  --osa-bg-cream: #fff8f3;
+  --osa-primary: #5b2e48;
+  --osa-secondary: #a05c7b;
+  --osa-accent: #f2b38f;
+  --osa-lavender: #c8b6ff;
+  --osa-text: #2f2430;
+  --osa-muted: #6e5a69;
 }
 
 * {
@@ -23,38 +24,36 @@ html {
 
 body {
   background-color: var(--osa-bg);
-  color: var(--osa-slate);
+  color: var(--osa-text);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Aurora background */
+/* Aurora base */
 .aurora-bg {
   background-image: radial-gradient(
-      ellipse 120% 80% at 50% -20%,
-      rgba(184, 164, 176, 0.22),
+      ellipse 140% 90% at 50% -30%,
+      rgba(200, 182, 255, 0.22),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 100% 70% at 100% 30%,
+      rgba(242, 179, 143, 0.16),
       transparent 50%
     ),
     radial-gradient(
-      ellipse 80% 50% at 100% 40%,
-      rgba(232, 184, 154, 0.18),
-      transparent 45%
-    ),
-    radial-gradient(
-      ellipse 70% 50% at 0% 70%,
-      rgba(201, 168, 108, 0.12),
+      ellipse 80% 60% at 0% 70%,
+      rgba(160, 92, 123, 0.1),
       transparent 45%
     );
 }
 
-/* Glass card */
-.glass-card {
-  background: rgba(255, 255, 255, 0.72);
+/* Glass surface */
+.glass {
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px rgba(92, 77, 106, 0.08),
-    0 0 0 1px rgba(255, 255, 255, 0.6) inset;
 }
 
 @layer utilities {
