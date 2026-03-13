@@ -5,8 +5,9 @@ const nextConfig = {
   reactStrictMode: true,
   output: "export",
   basePath: basePath || undefined,
-  assetPrefix: basePath || undefined,
+  assetPrefix: basePath ? `${basePath}/` : undefined,
   trailingSlash: true,
+  images: { unoptimized: true },
 };
 
 export default nextConfig;
