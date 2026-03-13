@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --osa-bg: #050816;
+  --osa-surface: #0b1020;
+  --osa-accent: #f97316;
+  --osa-text: #e5e7eb;
+  --osa-muted: #9ca3af;
+}
+
+body {
+  background-color: var(--osa-bg);
+  color: var(--osa-text);
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
