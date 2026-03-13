@@ -3,30 +3,58 @@
 @tailwind utilities;
 
 :root {
-  --osa-bg: #050816;
-  --osa-surface: #0b1020;
-  --osa-accent: #f97316;
-  --osa-text: #e5e7eb;
-  --osa-muted: #9ca3af;
+  --osa-bg: #faf8f6;
+  --osa-plum: #5c4d6a;
+  --osa-plum-deep: #3d3347;
+  --osa-rose: #b8a4b0;
+  --osa-peach: #e8b89a;
+  --osa-gold: #c9a86c;
+  --osa-slate: #1e293b;
+  --osa-slate-muted: #64748b;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--osa-bg);
-  color: var(--osa-text);
+  color: var(--osa-slate);
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-a, button {
-  cursor: pointer;
+/* Aurora background */
+.aurora-bg {
+  background-image: radial-gradient(
+      ellipse 120% 80% at 50% -20%,
+      rgba(184, 164, 176, 0.22),
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 80% 50% at 100% 40%,
+      rgba(232, 184, 154, 0.18),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse 70% 50% at 0% 70%,
+      rgba(201, 168, 108, 0.12),
+      transparent 45%
+    );
 }
 
-a:focus-visible, button:focus-visible {
-  outline: 2px solid var(--osa-accent);
-  outline-offset: 2px;
+/* Glass card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(92, 77, 106, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.6) inset;
 }
 
 @layer utilities {
