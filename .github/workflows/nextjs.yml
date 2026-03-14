@@ -28,8 +28,6 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      NEXT_PUBLIC_BASE_PATH: ${{ steps.setup-pages.outputs.base_path || '/OsaOra' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -79,6 +77,8 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.setup-pages.outputs.base_path || '/OsaOra' }}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Verifica output
         run: |
