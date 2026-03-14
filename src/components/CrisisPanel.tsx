@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function CrisisPanel() {
   return (
     <div
-      className="animate-slide-up rounded-[32px] border-2 border-osa-secondary/40 bg-white/90 p-6 shadow-glass-lg backdrop-blur-xl sm:p-8"
+      className="animate-slide-up rounded-[32px] border-2 border-osa-secondary/40 bg-white/95 p-6 shadow-glass-lg backdrop-blur-xl sm:p-8"
       role="alert"
       aria-live="assertive"
     >

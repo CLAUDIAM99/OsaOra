@@ -19,7 +19,7 @@ interface ResultPanelProps {
 export default function ResultPanel({ response, className = "" }: ResultPanelProps) {
   return (
     <div
-      className={`animate-slide-up space-y-5 rounded-[32px] border border-osa-primary/10 bg-osa-card p-6 shadow-glass-lg backdrop-blur-xl sm:p-8 ${className}`}
+      className={`animate-slide-up space-y-5 rounded-[32px] border border-osa-primary/10 bg-white/85 p-6 shadow-glass-lg backdrop-blur-xl sm:p-8 ${className}`}
       role="region"
       aria-live="polite"
       aria-label="Risposta di supporto"

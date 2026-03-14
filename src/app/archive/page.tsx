@@ -32,10 +32,11 @@ export default function ArchivePage() {
   }, []);
 
   return (
-    <div className="relative min-h-screen aurora-bg">
+    <div className="relative min-h-screen overflow-x-hidden aurora-bg">
       <BackgroundGlow />
-      <Navbar />
-      <main className="relative mx-auto max-w-3xl px-4 py-12 sm:px-8 sm:py-16">
+      <div className="relative z-10">
+        <Navbar />
+        <main className="relative mx-auto max-w-3xl px-4 py-12 sm:px-8 sm:py-16">
         <h1 className="font-serif text-3xl font-semibold text-osa-primary sm:text-4xl">
           Archivio
         </h1>
@@ -68,8 +69,9 @@ export default function ArchivePage() {
             )}
           </div>
         )}
-      </main>
-      <Footer />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }

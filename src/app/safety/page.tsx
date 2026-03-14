@@ -38,10 +38,11 @@ const resources = [
 
 export default function SafetyPage() {
   return (
-    <div className="relative min-h-screen aurora-bg">
+    <div className="relative min-h-screen overflow-x-hidden aurora-bg">
       <BackgroundGlow />
-      <Navbar />
-      <main className="relative mx-auto max-w-3xl px-4 py-12 sm:px-8 sm:py-16">
+      <div className="relative z-10">
+        <Navbar />
+        <main className="relative mx-auto max-w-3xl px-4 py-12 sm:px-8 sm:py-16">
         <div className="flex gap-3">
           <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-osa-secondary/15">
             <Shield className="h-6 w-6 text-osa-secondary" />
@@ -56,7 +57,7 @@ export default function SafetyPage() {
           </div>
         </div>
 
-        <div className="mt-10 rounded-3xl border border-osa-primary/10 bg-osa-card p-6 shadow-glass backdrop-blur-xl sm:p-8">
+        <div className="mt-10 rounded-3xl border border-osa-primary/10 bg-white/80 p-6 shadow-glass backdrop-blur-xl sm:p-8">
           <p className="text-osa-muted">
             OsaOra è un supporto motivazionale gentile e <strong className="text-osa-text">non sostituisce</strong> un
             professionista della salute mentale, un medico o i servizi di emergenza. Se pensi di fare del male a te
@@ -71,7 +72,7 @@ export default function SafetyPage() {
           {resources.map(({ name, phone, tel, hours }) => (
             <li
               key={name}
-              className="flex flex-wrap items-center gap-4 rounded-3xl border border-osa-primary/10 bg-osa-card p-5 shadow-soft backdrop-blur-xl sm:flex-nowrap"
+              className="flex flex-wrap items-center gap-4 rounded-3xl border border-osa-primary/10 bg-white/80 p-5 shadow-soft backdrop-blur-xl sm:flex-nowrap"
             >
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-osa-accent/20">
                 <Phone className="h-5 w-5 text-osa-primary" />
@@ -91,7 +92,7 @@ export default function SafetyPage() {
           ))}
         </ul>
 
-        <div className="mt-10 rounded-3xl border border-osa-primary/10 bg-osa-card p-6 shadow-soft backdrop-blur-xl">
+        <div className="mt-10 rounded-3xl border border-osa-primary/10 bg-white/80 p-6 shadow-soft backdrop-blur-xl">
           <h2 className="font-serif text-lg font-semibold text-osa-primary">
             Link utili
           </h2>
@@ -124,8 +125,9 @@ export default function SafetyPage() {
             ← Torna alla home
           </Link>
         </p>
-      </main>
-      <Footer />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -17,7 +17,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-osa-primary/5 bg-osa-bg/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 w-full border-b border-osa-primary/5 bg-osa-bg/90 backdrop-blur-xl supports-[backdrop-filter]:bg-osa-bg/80">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-8">
         <Link
           href="/"

@@ -2,7 +2,7 @@
 
 export default function BackgroundGlow() {
   return (
-    <div className="pointer-events-none fixed inset-0 overflow-hidden" aria-hidden>
+    <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden>
       {/* Lavender glow top-center */}
       <div
         className="absolute -top-[40%] left-1/2 h-[80vw] w-[80vw] -translate-x-1/2 rounded-full bg-osa-lavender/20 blur-[80px] sm:h-[60vw] sm:w-[60vw]"

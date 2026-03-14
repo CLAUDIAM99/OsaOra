@@ -25,7 +25,7 @@ export default function ArchiveEntries({ entries, onSelect }: ArchiveEntriesProp
           <button
             type="button"
             onClick={() => onSelect?.(entry)}
-            className="w-full rounded-3xl border border-osa-primary/10 bg-osa-card p-5 text-left shadow-soft backdrop-blur-xl transition hover:border-osa-primary/20 hover:shadow-glass focus:outline-none focus:ring-2 focus:ring-osa-primary/20"
+            className="w-full rounded-3xl border border-osa-primary/10 bg-white/80 p-5 text-left shadow-soft backdrop-blur-xl transition hover:border-osa-primary/20 hover:shadow-glass focus:outline-none focus:ring-2 focus:ring-osa-primary/20"
           >
             <div className="flex items-center gap-2 text-sm text-osa-muted">
               <Calendar className="h-4 w-4" />

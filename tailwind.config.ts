@@ -20,7 +20,7 @@ const config: Config = {
         "osa-lavender": "#c8b6ff",
         "osa-text": "#2f2430",
         "osa-muted": "#6e5a69",
-        "osa-card": "rgba(255,255,255,0.75)",
+        "osa-card": "#fcf8fb",
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
@@ -31,8 +31,8 @@ const config: Config = {
         "hero": ["2rem", { lineHeight: "1.2", letterSpacing: "-0.02em" }],
       },
       boxShadow: {
-        "glass": "0 8px 32px rgba(91, 46, 72, 0.06), 0 0 0 1px rgba(255,255,255,0.7) inset",
-        "glass-lg": "0 24px 48px rgba(91, 46, 72, 0.08), 0 0 0 1px rgba(255,255,255,0.8) inset",
+        "glass": "0 8px 32px rgba(91, 46, 72, 0.08), 0 0 0 1px rgba(255,255,255,0.8) inset",
+        "glass-lg": "0 24px 48px rgba(91, 46, 72, 0.1), 0 0 0 1px rgba(255,255,255,0.9) inset",
         "soft": "0 4px 24px rgba(91, 46, 72, 0.06)",
         "soft-lg": "0 12px 40px rgba(91, 46, 72, 0.08)",
       },

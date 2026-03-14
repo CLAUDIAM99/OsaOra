@@ -3,7 +3,7 @@ import { Shield } from "lucide-react";
 
 export default function SafetyBanner() {
   return (
-    <div className="rounded-3xl border border-osa-secondary/20 bg-osa-card p-4 shadow-glass backdrop-blur-xl sm:p-5">
+    <div className="rounded-3xl border border-osa-secondary/20 bg-white/85 p-4 shadow-glass backdrop-blur-xl sm:p-5">
       <div className="flex gap-3">
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-osa-secondary/10">
           <Shield className="h-5 w-5 text-osa-secondary" />

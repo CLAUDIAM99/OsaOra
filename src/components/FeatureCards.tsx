@@ -24,7 +24,7 @@ export default function FeatureCards() {
       {features.map(({ icon: Icon, title, description }) => (
         <div
           key={title}
-          className="rounded-3xl border border-osa-primary/10 bg-osa-card p-6 shadow-soft backdrop-blur-xl transition hover:border-osa-primary/15 hover:shadow-glass"
+          className="rounded-3xl border border-osa-primary/10 bg-white/80 p-6 shadow-soft backdrop-blur-xl transition hover:border-osa-primary/15 hover:shadow-glass"
         >
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-osa-lavender/20">
             <Icon className="h-6 w-6 text-osa-primary" />

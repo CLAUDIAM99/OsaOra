@@ -5,13 +5,15 @@ import HomeFlow from "@/components/HomeFlow";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen aurora-bg">
+    <div className="relative min-h-screen overflow-x-hidden aurora-bg">
       <BackgroundGlow />
-      <Navbar />
-      <main>
-        <HomeFlow />
-      </main>
-      <Footer />
+      <div className="relative z-10">
+        <Navbar />
+        <main>
+          <HomeFlow />
+          </main>
+        <Footer />
+      </div>
     </div>
   );
 }

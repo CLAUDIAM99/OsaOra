@@ -20,7 +20,7 @@ export default function PromptCard({
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-[32px] border border-osa-primary/10 bg-osa-card p-6 shadow-glass backdrop-blur-xl transition hover:shadow-glass-lg sm:p-8"
+      className="rounded-[32px] border border-osa-primary/10 bg-white/80 p-6 shadow-glass backdrop-blur-xl transition hover:shadow-glass-lg sm:p-8"
     >
       <label htmlFor="osaora-prompt" className="sr-only">
         Descrivi come ti senti o cosa ti blocca
