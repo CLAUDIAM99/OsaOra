@@ -20,7 +20,7 @@ const features = [
 
 export default function FeatureCards() {
   return (
-    <section className="grid gap-5 sm:grid-cols-3">
+    <section className="grid gap-8 sm:grid-cols-3">
       {features.map(({ icon: Icon, title, description }) => (
         <div
           key={title}
