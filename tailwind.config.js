@@ -1,7 +1,7 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -27,13 +27,13 @@ const config: Config = {
         serif: ["var(--font-serif)", "Georgia", "serif"],
       },
       fontSize: {
-        "display": ["2.75rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
-        "hero": ["2rem", { lineHeight: "1.2", letterSpacing: "-0.02em" }],
+        display: ["2.75rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
+        hero: ["2rem", { lineHeight: "1.2", letterSpacing: "-0.02em" }],
       },
       boxShadow: {
-        "glass": "0 8px 32px rgba(91, 46, 72, 0.08), 0 0 0 1px rgba(255,255,255,0.8) inset",
+        glass: "0 8px 32px rgba(91, 46, 72, 0.08), 0 0 0 1px rgba(255,255,255,0.8) inset",
         "glass-lg": "0 24px 48px rgba(91, 46, 72, 0.1), 0 0 0 1px rgba(255,255,255,0.9) inset",
-        "soft": "0 4px 24px rgba(91, 46, 72, 0.06)",
+        soft: "0 4px 24px rgba(91, 46, 72, 0.06)",
         "soft-lg": "0 12px 40px rgba(91, 46, 72, 0.08)",
       },
       borderRadius: {
@@ -41,7 +41,7 @@ const config: Config = {
         "4xl": "2rem",
       },
       backgroundImage: {
-        "aurora": "radial-gradient(ellipse 140% 90% at 50% -30%, rgba(200, 182, 255, 0.2), transparent 55%), radial-gradient(ellipse 100% 70% at 100% 30%, rgba(242, 179, 143, 0.18), transparent 50%), radial-gradient(ellipse 80% 60% at 0% 70%, rgba(160, 92, 123, 0.12), transparent 45%)",
+        aurora: "radial-gradient(ellipse 140% 90% at 50% -30%, rgba(200, 182, 255, 0.2), transparent 55%), radial-gradient(ellipse 100% 70% at 100% 30%, rgba(242, 179, 143, 0.18), transparent 50%), radial-gradient(ellipse 80% 60% at 0% 70%, rgba(160, 92, 123, 0.12), transparent 45%)",
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-out forwards",
@@ -61,5 +61,3 @@ const config: Config = {
   },
   plugins: [],
 };
-
-export default config;
