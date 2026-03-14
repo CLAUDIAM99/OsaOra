@@ -2,26 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import BackgroundGlow from "@/components/BackgroundGlow";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ArchiveEntries, { type ArchiveEntry } from "@/components/ArchiveEntries";
+import { loadArchive, type ArchiveEntry } from "@/lib/archive";
+import ArchiveEntries from "@/components/ArchiveEntries";
 import EmptyState from "@/components/EmptyState";
+import PageLayout from "@/components/PageLayout";
 import ResultPanel from "@/components/ResultPanel";
-
-const ARCHIVE_KEY = "osaora-archive";
-
-function loadArchive(): ArchiveEntry[] {
-  if (typeof window === "undefined") return [];
-  try {
-    const raw = localStorage.getItem(ARCHIVE_KEY);
-    if (!raw) return [];
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed : [];
-  } catch {
-    return [];
-  }
-}
 
 export default function ArchivePage() {
   const [entries, setEntries] = useState<ArchiveEntry[]>([]);
@@ -32,11 +17,8 @@ export default function ArchivePage() {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden aurora-bg">
-      <BackgroundGlow />
-      <div className="relative z-10">
-        <Navbar />
-        <main className="relative mx-auto max-w-3xl px-4 py-12 sm:px-8 sm:py-16">
+    <PageLayout>
+      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-8 sm:py-16">
         <h1 className="font-serif text-3xl font-semibold text-osa-primary sm:text-4xl">
           Archivio
         </h1>
@@ -66,9 +48,7 @@ export default function ArchivePage() {
             )}
           </div>
         )}
-        </main>
-        <Footer />
       </div>
-    </div>
+    </PageLayout>
   );
 }

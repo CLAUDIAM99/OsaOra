@@ -1,42 +1,14 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { detectCrisis, getCoachingResponse } from "@/lib/responseEngine";
-import type { CoachingResponse } from "./ResultPanel";
-import type { ArchiveEntry } from "./ArchiveEntries";
+import { saveEntry } from "@/lib/archive";
+import { detectCrisis, getCoachingResponse, type CoachingResponse } from "@/lib/responseEngine";
 import HeroSection from "./HeroSection";
 import SafetyBanner from "./SafetyBanner";
 import PromptCard from "./PromptCard";
 import ResultPanel from "./ResultPanel";
 import CrisisPanel from "./CrisisPanel";
 import FeatureCards from "./FeatureCards";
-
-const ARCHIVE_KEY = "osaora-archive";
-
-function loadArchive(): ArchiveEntry[] {
-  if (typeof window === "undefined") return [];
-  try {
-    const raw = localStorage.getItem(ARCHIVE_KEY);
-    if (!raw) return [];
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed : [];
-  } catch {
-    return [];
-  }
-}
-
-function saveEntry(prompt: string, response: CoachingResponse) {
-  const entries = loadArchive();
-  const entry: ArchiveEntry = {
-    id: crypto.randomUUID(),
-    date: new Date().toLocaleDateString("it-IT", { day: "numeric", month: "long", year: "numeric" }),
-    prompt: prompt.slice(0, 200),
-    response,
-  };
-  entries.unshift(entry);
-  const toKeep = entries.slice(0, 50);
-  localStorage.setItem(ARCHIVE_KEY, JSON.stringify(toKeep));
-}
 
 export default function HomeFlow() {
   const [input, setInput] = useState("");

@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { MessageCircle, Sparkles, Heart, ArrowRight } from "lucide-react";
-import BackgroundGlow from "@/components/BackgroundGlow";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import PageLayout from "@/components/PageLayout";
 
 export const metadata = {
   title: "Come funziona | OsaOra",
@@ -29,11 +27,8 @@ const steps = [
 
 export default function HowItWorksPage() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden aurora-bg">
-      <BackgroundGlow />
-      <div className="relative z-10">
-        <Navbar />
-        <main className="relative mx-auto max-w-3xl px-4 py-12 sm:px-8 sm:py-16">
+    <PageLayout>
+      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-8 sm:py-16">
         <h1 className="font-serif text-3xl font-semibold text-osa-primary sm:text-4xl">
           Come funziona
         </h1>
@@ -82,9 +77,7 @@ export default function HowItWorksPage() {
             Prova OsaOra <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
-        </main>
-        <Footer />
       </div>
-    </div>
+    </PageLayout>
   );
 }

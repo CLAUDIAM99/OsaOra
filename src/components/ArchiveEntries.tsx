@@ -1,14 +1,7 @@
 "use client";
 
 import { Calendar } from "lucide-react";
-import type { CoachingResponse } from "./ResultPanel";
-
-export interface ArchiveEntry {
-  id: string;
-  date: string;
-  prompt: string;
-  response: CoachingResponse;
-}
+import type { ArchiveEntry } from "@/lib/archive";
 
 interface ArchiveEntriesProps {
   entries: ArchiveEntry[];

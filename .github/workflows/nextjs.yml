@@ -29,11 +29,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # Must match the GitHub Pages URL path: https://claudiam99.github.io/OsaOra/
-      NEXT_PUBLIC_BASE_PATH: /OsaOra
+      NEXT_PUBLIC_BASE_PATH: ${{ steps.setup-pages.outputs.base_path || '/OsaOra' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Pages
+        id: setup-pages
+        uses: actions/configure-pages@v4
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -64,7 +66,7 @@ jobs:
       - name: Verifica Node
         run: node -v && npm -v
       - name: Log basePath
-        run: echo "NEXT_PUBLIC_BASE_PATH=/OsaOra"
+        run: echo "NEXT_PUBLIC_BASE_PATH=${{ steps.setup-pages.outputs.base_path }}"
       - name: Restore cache
         if: steps.detect-package-manager.outputs.has_lock == 'true'
         uses: actions/cache@v4
@@ -79,7 +81,10 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Verifica output
-        run: ls -la out/ 2>/dev/null || (echo "Cartella out non trovata" && exit 1)
+        run: |
+          ls -la out/ 2>/dev/null || (echo "Cartella out non trovata" && exit 1)
+          ls -la out/_next/static/ 2>/dev/null || true
+          grep -o 'src="[^"]*"' out/index.html 2>/dev/null | head -5 || true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -1,8 +1,6 @@
 import { Phone, ExternalLink, Shield } from "lucide-react";
 import Link from "next/link";
-import BackgroundGlow from "@/components/BackgroundGlow";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import PageLayout from "@/components/PageLayout";
 
 export const metadata = {
   title: "Sicurezza e risorse | OsaOra",
@@ -38,11 +36,8 @@ const resources = [
 
 export default function SafetyPage() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden aurora-bg">
-      <BackgroundGlow />
-      <div className="relative z-10">
-        <Navbar />
-        <main className="relative mx-auto max-w-3xl px-4 py-12 sm:px-8 sm:py-16">
+    <PageLayout>
+      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-8 sm:py-16">
         <div className="flex gap-3">
           <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-osa-secondary/15">
             <Shield className="h-6 w-6 text-osa-secondary" />
@@ -125,9 +120,7 @@ export default function SafetyPage() {
             ← Torna alla home
           </Link>
         </p>
-        </main>
-        <Footer />
       </div>
-    </div>
+    </PageLayout>
   );
 }

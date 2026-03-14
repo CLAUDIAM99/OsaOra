@@ -1,15 +1,9 @@
 "use client";
 
 import { Heart, Lightbulb, ListOrdered } from "lucide-react";
+import type { CoachingResponse } from "@/lib/responseEngine";
 import InsightCard from "./InsightCard";
 import QuoteRow from "./QuoteRow";
-
-export interface CoachingResponse {
-  empathy: string;
-  clarity: string;
-  steps: string[];
-  quote: string;
-}
 
 interface ResultPanelProps {
   response: CoachingResponse;
