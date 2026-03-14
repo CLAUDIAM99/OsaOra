@@ -46,7 +46,7 @@ export default function CrisisPanel() {
             </li>
           </ul>
           <p className="mt-4 text-sm text-osa-muted">
-            <Link href="/safety/" className="font-medium text-osa-primary underline decoration-osa-primary/40 underline-offset-2">
+            <Link href="/safety/" prefetch={false} className="font-medium text-osa-primary underline decoration-osa-primary/40 underline-offset-2">
               Vai alla pagina Sicurezza
             </Link>{" "}
             per altre risorse.

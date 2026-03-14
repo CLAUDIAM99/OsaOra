@@ -6,20 +6,17 @@ export default function Footer() {
     <footer className="border-t border-osa-primary/5 bg-osa-bg-warm/50">
       <div className="mx-auto max-w-5xl px-4 py-12 sm:px-8">
         <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between">
-          <Link
-            href="/"
-            className="font-serif text-lg font-semibold text-osa-primary"
-          >
+          <Link href="/" prefetch={false} className="font-serif text-lg font-semibold text-osa-primary">
             Osa<span className="text-osa-secondary">Ora</span>
           </Link>
           <nav className="flex flex-wrap justify-center gap-6 text-sm" aria-label="Footer">
-            <Link href="/how-it-works/" className="text-osa-muted transition hover:text-osa-primary">
+            <Link href="/how-it-works/" prefetch={false} className="text-osa-muted transition hover:text-osa-primary">
               Come funziona
             </Link>
-            <Link href="/archive/" className="text-osa-muted transition hover:text-osa-primary">
+            <Link href="/archive/" prefetch={false} className="text-osa-muted transition hover:text-osa-primary">
               Archivio
             </Link>
-            <Link href="/safety/" className="text-osa-muted transition hover:text-osa-primary">
+            <Link href="/safety/" prefetch={false} className="text-osa-muted transition hover:text-osa-primary">
               Sicurezza
             </Link>
           </nav>

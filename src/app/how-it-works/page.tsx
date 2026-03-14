@@ -78,10 +78,7 @@ export default function HowItWorksPage() {
         </div>
 
         <div className="mt-10 text-center">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 rounded-2xl bg-osa-primary px-6 py-3 font-medium text-white transition hover:bg-osa-primary-light"
-          >
+          <Link href="/" prefetch={false} className="inline-flex items-center gap-2 rounded-2xl bg-osa-primary px-6 py-3 font-medium text-white transition hover:bg-osa-primary-light">
             Prova OsaOra <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

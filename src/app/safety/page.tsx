@@ -121,7 +121,7 @@ export default function SafetyPage() {
         </div>
 
         <p className="mt-10 text-center text-sm text-osa-muted">
-          <Link href="/" className="font-medium text-osa-primary underline decoration-osa-primary/40 underline-offset-2">
+          <Link href="/" prefetch={false} className="font-medium text-osa-primary underline decoration-osa-primary/40 underline-offset-2">
             ← Torna alla home
           </Link>
         </p>

@@ -19,10 +19,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-osa-primary/5 bg-osa-bg/90 backdrop-blur-xl supports-[backdrop-filter]:bg-osa-bg/80">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-8">
-        <Link
-          href="/"
-          className="font-serif text-xl font-semibold tracking-tight text-osa-primary sm:text-2xl"
-        >
+        <Link href="/" prefetch={false} className="font-serif text-xl font-semibold tracking-tight text-osa-primary sm:text-2xl">
           Osa<span className="text-osa-secondary">Ora</span>
         </Link>
 
@@ -30,10 +27,7 @@ export default function Navbar() {
           {links.map(({ href, label }) => {
             const isActive = pathname === href;
             return (
-              <Link
-                key={href}
-                href={href}
-                className={`rounded-xl px-4 py-2 text-sm font-medium transition-colors ${
+              <Link key={href} href={href} prefetch={false} className={`rounded-xl px-4 py-2 text-sm font-medium transition-colors ${
                   isActive
                     ? "bg-osa-primary/10 text-osa-primary"
                     : "text-osa-muted hover:bg-osa-primary/5 hover:text-osa-text"
@@ -60,10 +54,7 @@ export default function Navbar() {
         <div className="border-t border-osa-primary/5 bg-osa-bg/95 backdrop-blur-xl md:hidden">
           <nav className="mx-auto max-w-5xl space-y-1 px-4 py-4" aria-label="Menu mobile">
             {links.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setOpen(false)}
+              <Link key={href} href={href} prefetch={false} onClick={() => setOpen(false)}
                 className={`block rounded-xl px-4 py-3 text-sm font-medium ${
                   pathname === href ? "bg-osa-primary/10 text-osa-primary" : "text-osa-muted"
                 }`}

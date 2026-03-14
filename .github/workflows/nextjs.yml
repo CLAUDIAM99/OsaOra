@@ -62,6 +62,8 @@ jobs:
           cache: ${{ steps.detect-package-manager.outputs.has_lock == 'true' && steps.detect-package-manager.outputs.manager || '' }}
       - name: Verifica Node
         run: node -v && npm -v
+      - name: Log basePath
+        run: echo "NEXT_PUBLIC_BASE_PATH=/$(echo ${{ github.event.repository.name }})"
       - name: Restore cache
         if: steps.detect-package-manager.outputs.has_lock == 'true'
         uses: actions/cache@v4

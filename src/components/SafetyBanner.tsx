@@ -14,7 +14,7 @@ export default function SafetyBanner() {
           </p>
           <p className="mt-1 text-sm text-osa-muted">
             Se stai attraversando un momento molto difficile,{" "}
-            <Link href="/safety/" className="font-medium text-osa-primary underline decoration-osa-primary/30 underline-offset-2 hover:decoration-osa-primary">
+            <Link href="/safety/" prefetch={false} className="font-medium text-osa-primary underline decoration-osa-primary/30 underline-offset-2 hover:decoration-osa-primary">
               consulta la pagina Sicurezza
             </Link>{" "}
             per risorse e numeri utili.
