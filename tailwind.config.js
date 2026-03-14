@@ -60,4 +60,13 @@ module.exports = {
     },
   },
   plugins: [],
+  safelist: [
+    { pattern: /^(bg|text|border|ring|from|to|via)-osa-/, variants: ["hover", "focus"] },
+    "font-sans", "font-serif", "antialiased",
+    "min-h-screen", "min-h-0", "overflow-x-hidden", "overflow-hidden",
+    "flex", "flex-col", "items-center", "justify-center", "justify-between",
+    "rounded-xl", "rounded-2xl", "rounded-3xl", "rounded-\[32px\]",
+    "shadow-glass", "shadow-glass-lg", "shadow-soft",
+    "backdrop-blur-xl", "backdrop-blur-sm",
+  ],
 };
