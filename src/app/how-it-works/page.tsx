@@ -33,7 +33,7 @@ export default function HowItWorksPage() {
           Come funziona
         </h1>
         <p className="mt-3 text-lg text-osa-muted">
-          OsaOra è un supporto motivazionale gentile, non terapia. Ecco come usarlo.
+          OsaOra è un supporto motivazionale, non terapia. Ecco come usarlo.
         </p>
 
         <div className="mt-12 space-y-10 sm:space-y-12">

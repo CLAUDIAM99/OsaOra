@@ -54,7 +54,7 @@ export default function SafetyPage() {
 
         <div className="mt-10 rounded-3xl border border-osa-primary/10 bg-white/80 p-6 shadow-glass backdrop-blur-xl sm:p-8">
           <p className="text-osa-muted">
-            OsaOra è un supporto motivazionale gentile e <strong className="text-osa-text">non sostituisce</strong> un
+            OsaOra è un supporto motivazionale e <strong className="text-osa-text">non sostituisce</strong> un
             professionista della salute mentale, un medico o i servizi di emergenza. Se pensi di fare del male a te
             stessa o ad altri, o sei in pericolo, contatta subito un servizio di ascolto o il 112.
           </p>

@@ -19,7 +19,7 @@ const serif = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "OsaOra — Un momento di chiarezza",
   description:
-    "Supporto motivazionale gentile per quando ti senti bloccata, impaurita o sopraffatta. Non è terapia: è come avere un coach mentale al tuo fianco.",
+    "Supporto motivazionale per quando ti senti bloccata, impaurita o sopraffatta. Non è terapia: è come avere un coach mentale al tuo fianco.",
 };
 
 export default function RootLayout({

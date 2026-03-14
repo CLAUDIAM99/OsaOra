@@ -75,7 +75,7 @@ export default function HomeFlow() {
             Perché OsaOra
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-osa-muted">
-            Un supporto motivazionale gentile, mai clinico. Pensato per darti chiarezza e piccoli passi concreti.
+            Un supporto motivazionale, mai clinico. Pensato per darti chiarezza e piccoli passi concreti.
           </p>
           <div className="mt-10">
             <FeatureCards />
