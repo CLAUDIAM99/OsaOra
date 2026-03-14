@@ -12,7 +12,7 @@ export default function ArchiveEntries({ entries, onSelect }: ArchiveEntriesProp
   if (entries.length === 0) return null;
 
   return (
-    <ul className="space-y-4">
+    <ul className="space-y-6">
       {entries.map((entry) => (
         <li key={entry.id}>
           <button

@@ -36,7 +36,7 @@ export default function HowItWorksPage() {
           OsaOra è un supporto motivazionale gentile, non terapia. Ecco come usarlo.
         </p>
 
-        <div className="mt-12 space-y-10">
+        <div className="mt-12 space-y-10 sm:space-y-12">
           {steps.map(({ icon: Icon, title, description }, i) => (
             <div
               key={title}

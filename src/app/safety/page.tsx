@@ -63,7 +63,7 @@ export default function SafetyPage() {
         <h2 className="mt-12 font-serif text-xl font-semibold text-osa-primary">
           Numeri utili
         </h2>
-        <ul className="mt-4 space-y-4">
+        <ul className="mt-4 space-y-6">
           {resources.map(({ name, phone, tel, hours }) => (
             <li
               key={name}
@@ -87,7 +87,7 @@ export default function SafetyPage() {
           ))}
         </ul>
 
-        <div className="mt-10 rounded-3xl border border-osa-primary/10 bg-white/80 p-6 shadow-soft backdrop-blur-xl">
+        <div className="mt-12 rounded-3xl border border-osa-primary/10 bg-white/80 p-6 shadow-soft backdrop-blur-xl">
           <h2 className="font-serif text-lg font-semibold text-osa-primary">
             Link utili
           </h2>
