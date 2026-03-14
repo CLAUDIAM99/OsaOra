@@ -29,7 +29,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+      # Must match the GitHub Pages URL path: https://claudiam99.github.io/OsaOra/
+      NEXT_PUBLIC_BASE_PATH: /OsaOra
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -63,7 +64,7 @@ jobs:
       - name: Verifica Node
         run: node -v && npm -v
       - name: Log basePath
-        run: echo "NEXT_PUBLIC_BASE_PATH=/$(echo ${{ github.event.repository.name }})"
+        run: echo "NEXT_PUBLIC_BASE_PATH=/OsaOra"
       - name: Restore cache
         if: steps.detect-package-manager.outputs.has_lock == 'true'
         uses: actions/cache@v4
